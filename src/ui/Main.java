@@ -21,16 +21,3 @@ public class Main extends Application {
 		stage.show();
 	}
 }
-
-/**
- * private void loadDictionary(){ String filePath=""; if(topic==TOPIC_ANIMALS){
- * filePath="resourses/Animals.txt"; }else if(topic==TOPIC_BRANDS){
- * filePath="resourses/Brands.txt"; }else if(topic==TOPIC_CULTURE){
- * filePath="resourses/Culture.txt"; }else if(topic==TOPIC_PLANTS){
- * filePath="resourses/Plants.txt"; }else if(topic==TOPIC_SPORTS){
- * filePath="resourses/Sports.txt"; } try{ FileReader fr=new
- * FileReader(filePath); BufferedReader br=new BufferedReader(fr); String
- * sCurrentLine=br.readLine(); while(sCurrentLine!=null){
- * dictionary.add(sCurrentLine); sCurrentLine=br.readLine(); } }catch(Exception
- * e){ e.printStackTrace(); } }
- */

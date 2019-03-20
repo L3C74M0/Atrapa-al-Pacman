@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.Pane?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="962.0" prefWidth="1229.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PacManController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="970.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.PacManController">
    <children>
-      <MenuBar prefHeight="32.0" prefWidth="640.0">
+      <MenuBar prefHeight="32.0" prefWidth="970.0">
         <menus>
           <Menu mnemonicParsing="false" text="Archivo">
             <items>
-              <MenuItem mnemonicParsing="false" text="Cargar juego" />
-                  <MenuItem mnemonicParsing="false" text="Guardar juego" />
-                  <MenuItem mnemonicParsing="false" text="Salir" />
+                  <Menu mnemonicParsing="false" text="Cargar juego">
+                     <items>
+                        <MenuItem fx:id="level0" mnemonicParsing="false" onAction="#loadLevel0" text="Nivel 0" />
+                        <MenuItem fx:id="level1" mnemonicParsing="false" onAction="#loadLevel1" text="Nivel 1" />
+                        <MenuItem fx:id="level2" mnemonicParsing="false" onAction="#loadLevel2" text="Nivel 2" />
+                     </items>
+                  </Menu>
+                  <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Guardar juego" />
+                  <MenuItem mnemonicParsing="false" onAction="#Exit" text="Salir" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="ver">
             <items>
-              <MenuItem mnemonicParsing="false" text="Mejores puntajes" />
-                  <MenuItem mnemonicParsing="false" text="Acerca del juego" />
+              <MenuItem fx:id="HighScores" mnemonicParsing="false" text="Mejores puntajes" />
+                  <MenuItem fx:id="AboutGame" mnemonicParsing="false" text="Acerca del juego" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
+      <Label fx:id="score" layoutX="864.0" layoutY="32.0" prefHeight="21.0" prefWidth="83.0" text="Puntos:      " />
+      <Pane fx:id="pane" layoutX="16.0" layoutY="52.0" prefHeight="507.0" prefWidth="941.0" />
    </children>
 </Pane>
