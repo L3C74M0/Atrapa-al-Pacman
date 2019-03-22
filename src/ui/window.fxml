@@ -25,8 +25,8 @@
           </Menu>
           <Menu mnemonicParsing="false" text="ver">
             <items>
-              <MenuItem fx:id="HighScores" mnemonicParsing="false" text="Mejores puntajes" />
-                  <MenuItem fx:id="AboutGame" mnemonicParsing="false" text="Acerca del juego" />
+              <MenuItem fx:id="ShowHighScores" mnemonicParsing="false" onAction="#ShowHighScores" text="Mejores puntajes" />
+                  <MenuItem fx:id="AboutGame" mnemonicParsing="false" onAction="#AboutGame" text="Acerca del juego" />
             </items>
           </Menu>
         </menus>
